@@ -10,3 +10,16 @@ funBusImg.addEventListener("click", () => {
         funBusImg.style.transform = "scale(1)";
     })
 })
+
+//2. Prevent Links From Refreshing
+let stopLinks = document.querySelectorAll('a');
+console.log(stopLinks)
+
+stopLinks.forEach((item,index) =>{
+    item.addEventListener("click", (event) =>{
+        event.preventDefault();
+        console.log("prevented default click");
+    })
+})
+
+    
