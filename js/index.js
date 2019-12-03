@@ -2,14 +2,20 @@
 
 //1. Fun Bus Img Click
 let funBusImg = document.querySelector('header img');
-funBusImg.addEventListener("click", () => {
-    funBusImg.style.transform = "scale(1.2)";
-    funBusImg.style.transition = "transform 0.3s"
-    funBusImg.style.zIndex = "-1";
+setInterval(function(){
     funBusImg.addEventListener("click", () => {
-        funBusImg.style.transform = "scale(1)";
+        funBusImg.style.transform = "scale(1.2)";
+        funBusImg.style.paddingBottom = "25px";
+        funBusImg.style.transition = "transform 0.3s"
+        funBusImg.style.zIndex = "-1";
+        funBusImg.addEventListener("click", () => {
+            funBusImg.style.transform = "scale(1)";
+            funBusImg.style.paddingBottom = "0";
+            funBusImg.style.transition = "transform 0.3s"
+        })
     })
-})
+},1000)
+
 
 //2. Prevent Links From Refreshing
 let stopLinks = document.querySelectorAll('a');
@@ -58,4 +64,14 @@ imgContent.forEach((item) =>{
     })
 })
 console.log(imgContent);
-    
+
+//5. content destination
+let textContent = document.querySelectorAll('h2, h3, h4');
+textContent.forEach((item) =>{
+    item.addEventListener("mouseenter", () =>{
+        item.style.color = "aqua";
+    })
+    item.addEventListener("mouseleave", () =>{
+        item.style.color = "black";
+    })
+})
