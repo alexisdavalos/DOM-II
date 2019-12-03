@@ -76,5 +76,24 @@ textContent.forEach((item) =>{
     })
 })
 
-//6. Add Preloader
+//6. Add Preloader Gif
 let preLoader = document.createElement('div');
+let preLoaderGif = document.createElement('span');
+let preLoaderTitle = document.createElement('h1');
+let body = document.querySelector('body');
+preLoaderTitle.textContent = "Welcome To The Fun Bus!";
+preLoader.appendChild(preLoaderTitle);
+preLoader.classList.add("preloader");
+preLoaderGif.classList.add("preloader-gif");
+preLoader.append(preLoaderGif);
+body.prepend(preLoader);
+
+setTimeout(() =>{
+    preLoader.style.opacity = "0";
+    preLoader.style.transition = "1s";
+},2000)
+
+// window.onload = () => {
+//     preLoader.style.opacity = "0";
+//     preLoader.style.transition = "1s";
+// }
