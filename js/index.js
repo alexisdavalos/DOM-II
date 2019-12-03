@@ -22,4 +22,23 @@ stopLinks.forEach((item,index) =>{
     })
 })
 
+//3. Scroll Nav Bar Color Switch
+let myNav = document.querySelector('header');
+
+window.onscroll = () =>{
+    'use strict';
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        if(document.documentElement.clientWidth > 800){
+          myNav.classList.add("nav-colored");
+          myNav.classList.remove("nav-transparent");
+        }
+      
+    }
+    else if (document.body.scrollTop === 0) {
+        if(document.documentElement.clientWidth > 800){
+          myNav.classList.add("nav-transparent");
+          myNav.classList.remove("nav-colored");
+        }  
+    }
+}
     

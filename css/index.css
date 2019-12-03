@@ -215,6 +215,18 @@ img {
   color: #212529;
   text-decoration: none;
 }
+.nav-colored {
+  background-color: black;
+}
+.nav-colored .nav-link {
+  color: white !important;
+}
+.nav-colored .logo-heading {
+  color: white !important;
+}
+.nav-transparent {
+  background-color: white;
+}
 .footer {
   width: 100%;
   border-top: 2px dashed #C0C0C0;
