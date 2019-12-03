@@ -41,4 +41,21 @@ window.onscroll = () =>{
         }  
     }
 }
+
+//4. imgContent scale on hover
+
+let imgContent = document.querySelectorAll('.img-content img');
+imgContent.forEach((item) =>{
+    item.addEventListener("mouseenter", () =>{
+        item.style.transform = "scale(.9)";
+        item.style.transition = "0.3s";
+        console.log("mouse-enter");
+    })
+    item.addEventListener("mouseleave", () =>{
+        item.style.transform = "scale(1)";
+        item.style.transition = "0.3s";
+        console.log("mouse-leave");
+    })
+})
+console.log(imgContent);
     

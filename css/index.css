@@ -217,6 +217,7 @@ img {
 }
 .nav-colored {
   background-color: black;
+  z-index: 1;
 }
 .nav-colored .nav-link {
   color: white !important;
@@ -226,6 +227,7 @@ img {
 }
 .nav-transparent {
   background-color: white;
+  z-index: 1;
 }
 .footer {
   width: 100%;
