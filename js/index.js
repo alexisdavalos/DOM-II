@@ -75,3 +75,6 @@ textContent.forEach((item) =>{
         item.style.color = "black";
     })
 })
+
+//6. Add Preloader
+let preLoader = document.createElement('div');
