@@ -154,4 +154,28 @@ destP.forEach((item) =>{
     })
 })
 
-//9.
+//9. Key Press
+
+document.onkeydown = e =>{
+    switch (e.keyCode) {
+        case 37:
+            alert('TO DA LEFT TO DA LEFT');
+            break;
+        case 38:
+            alert('UP UP AND AWAY');
+            break;
+        case 39:
+            alert('YOU ARE SO RIGHT');
+            break;
+        case 40:
+            alert('ARE YOU DOWN DOWN DOWN DOWN DOWN?');
+            break;
+    }
+};
+
+//10. Logo Message
+
+let logo = document.querySelector('.logo-heading');
+logo.addEventListener("click", () =>{
+    alert('VROOM VROOM! ITS THE FUN BUS!');
+})
