@@ -179,3 +179,29 @@ let logo = document.querySelector('.logo-heading');
 logo.addEventListener("click", () =>{
     alert('VROOM VROOM! ITS THE FUN BUS!');
 })
+
+// Stretch GSAP
+
+gsap.registerEffect({
+    name: "fadeOut",
+    defaults: {duration: 2}, 
+    effect: (targets, config) => {
+        return gsap.to(targets, {duration: config.duration, opacity: 0});
+    }
+});
+gsap.registerEffect({
+    name: "fadeIn",
+    defaults: {duration: 2}, 
+    effect: (targets, config) => {
+        return gsap.to(targets, {duration: config.duration, opacity: 100});
+    }
+});
+
+
+logo.addEventListener("mouseenter", function() {
+    gsap.effects.fadeOut(this);
+});
+logo.addEventListener("mouseleave", function() {
+    gsap.effects.fadeIn(this);
+});
+ 
