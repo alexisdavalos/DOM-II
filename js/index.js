@@ -89,11 +89,27 @@ preLoader.append(preLoaderGif);
 body.prepend(preLoader);
 
 setTimeout(() =>{
+    preLoader.style.visibility ="hidden";
     preLoader.style.opacity = "0";
     preLoader.style.transition = "1s";
-},2000)
+},2000);
 
 // window.onload = () => {
 //     preLoader.style.opacity = "0";
 //     preLoader.style.transition = "1s";
 // }
+
+//7. Content Destination Sub Title Add
+
+let destinationImg = document.querySelector('.content-destination img');
+let contentDestination = document.querySelector('.content-destination');
+let destinationSubTitle = document.createElement('h2');
+destinationSubTitle.textContent = "What an amazing possibility!";
+destinationImg.addEventListener("dblclick", () =>{
+    destinationImg.style.transform = "scale(1.2)";
+    destinationImg.style.margin="5%";
+    contentDestination.append(destinationSubTitle);
+    destinationSubTitle.style.textAlign ="center";
+    
+
+})
