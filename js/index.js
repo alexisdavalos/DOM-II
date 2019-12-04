@@ -1,20 +1,39 @@
 // Your code goes here
 
-//1. Fun Bus Img Click
+//1. Fun Bus Img Click //test with toggle
 let funBusImg = document.querySelector('header img');
-setInterval(function(){
+// setInterval(function(){
+//     funBusImg.addEventListener("click", () => {
+//         funBusImg.style.transform = "scale(1.2)";
+//         funBusImg.style.paddingBottom = "25px";
+//         funBusImg.style.transition = "transform 0.3s"
+//         funBusImg.style.zIndex = "-1";
+//         funBusImg.addEventListener("click", () => {
+//             funBusImg.style.transform = "scale(1)";
+//             funBusImg.style.paddingBottom = "0";
+//             funBusImg.style.transition = "transform 0.3s"
+//         })
+//     })
+// },1000)
+let isLarge = 0;
+if(isLarge < 1){
     funBusImg.addEventListener("click", () => {
         funBusImg.style.transform = "scale(1.2)";
         funBusImg.style.paddingBottom = "25px";
         funBusImg.style.transition = "transform 0.3s"
         funBusImg.style.zIndex = "-1";
-        funBusImg.addEventListener("click", () => {
-            funBusImg.style.transform = "scale(1)";
-            funBusImg.style.paddingBottom = "0";
-            funBusImg.style.transition = "transform 0.3s"
-        })
-    })
-},1000)
+        isLarge = 1;
+
+});
+}else{
+    funBusImg.addEventListener("click", () => {
+        funBusImg.style.transform = "scale(1)";
+        funBusImg.style.paddingBottom = "0";
+        funBusImg.style.transition = "transform 0.3s"
+        isLarge = 0;
+    });
+}
+
 
 
 //2. Prevent Links From Refreshing
@@ -110,6 +129,29 @@ destinationImg.addEventListener("dblclick", () =>{
     destinationImg.style.margin="5%";
     contentDestination.append(destinationSubTitle);
     destinationSubTitle.style.textAlign ="center";
-    
-
 })
+
+//8. Event Propogation
+
+let contentPick = document.querySelector('.content-pick');
+contentPick.addEventListener("click", () =>{
+    contentPick.style.backgroundColor = "bisque";
+})
+
+let destinations = document.querySelectorAll('.destination');
+destinations.forEach((item) =>{
+    item.addEventListener("click", (e) =>{
+        item.style.backgroundColor ="darksalmon";
+        e.stopPropagation();
+    })
+})
+
+let destP = document.querySelectorAll('.destination p');
+destP.forEach((item) =>{
+    item.addEventListener("click", (e) =>{
+        item.style.color ="aqua";
+        e.stopPropagation();
+    })
+})
+
+//9.
