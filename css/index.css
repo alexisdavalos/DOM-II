@@ -215,6 +215,20 @@ img {
   color: #212529;
   text-decoration: none;
 }
+.nav-colored {
+  background-color: black;
+  z-index: 1;
+}
+.nav-colored .nav-link {
+  color: white !important;
+}
+.nav-colored .logo-heading {
+  color: white !important;
+}
+.nav-transparent {
+  background-color: white;
+  z-index: 1;
+}
 .footer {
   width: 100%;
   border-top: 2px dashed #C0C0C0;
@@ -349,4 +363,25 @@ img {
 .home .content-pick .destination .btn:hover {
   background: #FFFFFF;
   color: #17A2B8;
+}
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #ffffff;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.preloader-gif {
+  width: 500px;
+  height: 500px;
+  display: block;
+  background: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia1.tenor.com%2Fimages%2Fa642c340e2159c78e52f62b0dc886762%2Ftenor.gif%3Fitemid%3D7738800&f=1&nofb=1');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
